@@ -4,6 +4,7 @@
 
 const input = document.getElementsByTagName('input'); // collection of all input tags
 for(let inp of input){
+    if(inp) // if input is password, validate specific conditions
     inp.addEventListener('focusout', (e) => {
         //console.log(inp.id);
         //console.log(inp.reportValidity());
