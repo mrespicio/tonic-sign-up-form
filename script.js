@@ -22,6 +22,8 @@ function validate(inp, type){
             }
             else console.log('not good!')
             break;
+        case 'email':
+            if(/^[A-Za-z]+$/)
         
      }
 
