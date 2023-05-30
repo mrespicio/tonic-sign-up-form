@@ -20,6 +20,14 @@
             </section>
             <section id="signup">
                 <form action="">
+                    <!-- validation ux 
+                    validates when user leaves input
+                    if valid, then good
+                    if mistake, box will appear :invalid 
+                    stay invalid until valid (even without the user exiting)
+                    -->
+
+                    <!-- no constraints for first and last name -->
                     <label for="fname">First Name</label>
                     <input type="text" id="fname" name="first-name">
                     <br>
@@ -28,18 +36,25 @@
                     <input type="text" id="lname" name="last-name">
                     <br>
 
+                    <!-- type email takes care of validation -->
                     <label for="email">Email</label>
                     <input type="email" id="email" name="e-mail">
                     <br>
 
+                    <!-- pure numbers or numbers with dashes, spaces, or . -->
                     <label for="pnum">Phone Number</label>
-                    <input type="text" id="pnum" name="phone-num">
+                    <input type="text" id="pnum" name="phone-num" 
+                    pattern="[0-9]{10}|\d{3}[\-\s\.]\d{3}[\-\-\s\.]\d{4}">
                     <br>
 
+                    <!-- length > 8, contains num, upper, and lower -->
+                    <!-- use js to check -->
                     <label for="pw">Password</label>
-                    <input type="password" id="pw" name="p-word">
+                    <input type="text" id="pw" name="p-word"
+                    minlength="8" maxlength="16" pattern="[0-9 a-z A-Z]{8-16}">
                     <br>
 
+                    <!-- check this with p-word in js -->
                     <label for="cpw">Confirm Password</label>
                     <input type="password" id="cpw" name="conp-word">
                     <br>
