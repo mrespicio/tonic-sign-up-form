@@ -29,16 +29,19 @@
 
                     <!-- no constraints for first and last name -->
                     <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="first-name">
+                    <input type="text" id="fname" name="first-name" 
+                    minlength="1" required 
+                    onfocusout="validate((document.getElementById('fname').value), 'names')">
                     <br>
 
                     <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="last-name">
+                    <input type="text" id="lname" name="last-name" 
+                    minlength="1" required>
                     <br>
 
                     <!-- type email takes care of validation -->
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="e-mail">
+                    <input type="email" id="email" name="e-mail" required>
                     <br>
 
                     <!-- pure numbers or numbers with dashes, spaces, or . -->
@@ -51,13 +54,13 @@
                     <!-- use js to check -->
                     <label for="pw">Password</label>
                     <input type="text" id="pw" name="p-word"
-                    minlength="8" maxlength="16" pattern="[0-9 a-z A-Z]{8-16}">
+                    minlength="8" maxlength="16" pattern="[0-9a-zA-Z]{8-16}">
                     <br>
 
                     <!-- check this with p-word in js -->
                     <label for="cpw">Confirm Password</label>
                     <input type="password" id="cpw" name="conp-word"
-                    minlength="8" maxlength="16" pattern="[0-9 a-z A-Z]{8-16}">
+                    minlength="8" maxlength="16" pattern="[0-9a-zA-Z]{8-16}">
                     <br>
 
                     <button type="submit" id="submit">Create Account</button>

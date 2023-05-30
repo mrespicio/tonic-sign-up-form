@@ -1,4 +1,4 @@
-input:valid{
+/*input:valid{
     border: 1px solid green;
 }
 
@@ -9,3 +9,4 @@ input:invalid{
 input:focus{
     border: 3px solid lightblue;
 }
+
