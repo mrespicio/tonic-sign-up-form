@@ -1,33 +1,26 @@
 
 
 /* validate each input */
-/*
+
 const input = document.getElementsByTagName('input'); // collection of all input tags
-for(inp of input){
-    inp.addEventListener('focusout', validate(inp))
-} */
-
-function validate(inp, type){
-    //console.log(inp.reportValidity());
-    /*if(inp.checkValidity()){
-        console.log('good!')
-    }
-    else if(!inp.checkValidity()){
-     console.log('not valid!')} */
-    
-     switch(type){
-        case 'names':
-            if((/^[A-Za-z]+$/).test(inp)){
-                console.log('good!')
-            }
-            else console.log('not good!')
-            break;
-        case 'email':
-            if(/^[A-Za-z]+$/)
-        
-     }
-
+for(let inp of input){
+    inp.addEventListener('focusout', (e) => {
+        //console.log(inp.id);
+        //console.log(inp.reportValidity());
+        if(inp.checkValidity()){
+            //console.log(inp);
+            console.log('good!')
+        }
+        else console.log('not good!');
+    }) // add event to all input fields
 }
+
+
+/*
+function validate(inp){
+    //inp.checkValidity();
+    console.log(inp.reportValidity());
+} */
 
 /* password validation */
 /* check if input has lower, upper, and number */
