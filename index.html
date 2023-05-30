@@ -56,7 +56,8 @@
 
                     <!-- check this with p-word in js -->
                     <label for="cpw">Confirm Password</label>
-                    <input type="password" id="cpw" name="conp-word">
+                    <input type="password" id="cpw" name="conp-word"
+                    minlength="8" maxlength="16" pattern="[0-9 a-z A-Z]{8-16}">
                     <br>
 
                     <button type="submit" id="submit">Create Account</button>
