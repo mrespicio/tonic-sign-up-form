@@ -53,13 +53,13 @@
                     <!-- use js to check -->
                     <label for="pw">Password</label>
                     <input type="text" id="pw" name="p-word"
-                    pattern="[0-9a-zA-Z]{8-16}" required>
+                    minlength="8" maxlength="24" pattern="^[a-zA-Z0-9]*$" required>
                     <br>
 
                     <!-- check this with p-word in js -->
                     <label for="cpw">Confirm Password</label>
                     <input type="password" id="cpw" name="conp-word"
-                    minlength="8" maxlength="16" pattern="[0-9a-zA-Z]{8-16}" required>
+                    minlength="8" maxlength="24" pattern="^[a-zA-Z0-9]*$" required>
                     <br>
 
                     <button type="submit" id="submit">Create Account</button>
