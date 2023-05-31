@@ -55,6 +55,12 @@
                     <input type="text" id="pw" name="p-word"
                     minlength="8" maxlength="24" pattern="^[a-zA-Z0-9]*$" required>
                     <br>
+                    <ul id="pw-conditions">
+                        <li>Contains 8 or more characters</li>
+                        <li>Contains number</li>
+                        <li>Contains lower case</li>
+                        <li>Contains upper case</li>
+                    </ul>
 
                     <!-- check this with p-word in js -->
                     <label for="cpw">Confirm Password</label>

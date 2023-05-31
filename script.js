@@ -8,6 +8,30 @@ for(let inp of input){
     inp.addEventListener('focusout', (e) => {
         //console.log(inp.id);
         //console.log(inp.reportValidity());
+
+        // pw contains num, upper, and lower
+        if(inp.id == 'pw'){
+            console.log('pw field');
+            const userPw = document.getElementById('pw').value;
+            const pwLength = document.getElementsByTagName('li')[0]
+            const pwNum = document.getElementsByTagName('li')[1]
+            const pwLower = document.getElementsByTagName('li')[2]
+            const pwUpper = document.getElementsByTagName('li')[3]
+
+            if(userPw.length>=8) pwLength.style.color = 'green';
+            else if(userPw.length<8) pwLength.style.color = 'red';
+
+            if(/\d/.test(userPw)) pwNum.style.color = 'green'
+            else if(!/\d/.test(userPw)) pwNum.style.color = 'red'
+
+            if(/[a-z]/.test(userPw)) pwLower.style.color = 'green'
+            else if(!/[a-z]/.test(userPw)) pwLower.style.color = 'red'
+
+            if(/[A-Z]/.test(userPw)) pwUpper.style.color = 'green'
+            else if(!/[A-Z]/.test(userPw)) pwUpper.style.color = 'red'
+        }
+
+        //other fields where html validation takes care of
         if(inp.checkValidity()){
             //console.log(inp);
             console.log('good!')
@@ -17,11 +41,6 @@ for(let inp of input){
 }
 
 
-/*
-function validate(inp){
-    //inp.checkValidity();
-    console.log(inp.reportValidity());
-} */
 
 /* password validation */
 /* check if input has lower, upper, and number */
