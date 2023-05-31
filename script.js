@@ -31,11 +31,11 @@ for(let inp of input){
             if(/[A-Z]/.test(userPw)) pwUpper.style.color = 'green'
             else if(!/[A-Z]/.test(userPw)) pwUpper.style.color = 'red'
 
-            if(!/^[a-zA-Z0-9]*$/.test(userPw)) pwSpe.style.color = 'red'
+            if(!/^[a-zA-Z0-9]*$/.test(userPw) || userPw == '') pwSpe.style.color = 'red' 
             else if(/^[a-zA-Z0-9]*$/.test(userPw)) pwSpe.style.color = 'green'
         }
 
-        
+
         //other fields where html validation takes care of
         if(inp.checkValidity()){
             //console.log(inp);
