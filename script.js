@@ -8,11 +8,12 @@ for(let inp of input){
     inp.addEventListener('focusout', (e) => {
         //console.log(inp.id);
         //console.log(inp.reportValidity());
+        const userPw = document.getElementById('pw').value;
+        const userPwCon = document.getElementById('cpw').value;
 
         // pw contains num, upper, and lower
         if(inp.id == 'pw'){
             //console.log('pw field');
-            const userPw = document.getElementById('pw').value;
             const pwLength = document.getElementsByTagName('li')[0]
             const pwNum = document.getElementsByTagName('li')[1]
             const pwLower = document.getElementsByTagName('li')[2]
@@ -35,6 +36,18 @@ for(let inp of input){
             else if(/^[a-zA-Z0-9]*$/.test(userPw)) pwSpe.style.color = 'green'
         }
 
+
+        if(inp.id == 'cpw'){
+            const pwCon = document.getElementById('pw-confirmation-txt');
+            if(userPwCon == userPw){
+                pwCon.innerHTML = 'Passwords match!'
+                pwCon.style.color ='green';
+            } 
+            else{
+                pwCon.innerHTML = 'Passwords do not match';
+                pwCon.style.color = 'red';
+            }
+        }
 
         //other fields where html validation takes care of
         if(inp.checkValidity()){

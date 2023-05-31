@@ -52,9 +52,8 @@
                     <!-- length > 8, contains num, upper, and lower -->
                     <!-- use js to check -->
                     <label for="pw">Password</label>
-                    <input type="text" id="pw" name="p-word"
+                    <input type="password" id="pw" name="p-word"
                     minlength="8" maxlength="24" pattern="^[a-zA-Z0-9]*$" required>
-                    <br>
                     <ul id="pw-conditions">
                         <li>Contains 8 or more characters</li>
                         <li>Contains number</li>
@@ -63,12 +62,14 @@
                         <li>No special characters</li>
                     </ul>
 
+                    <br>
                     <!-- check this with p-word in js -->
                     <label for="cpw">Confirm Password</label>
                     <input type="password" id="cpw" name="conp-word"
                     minlength="8" maxlength="24" pattern="^[a-zA-Z0-9]*$" required>
-                    <br>
+                    <p id="pw-confirmation-txt">Passwords do not match</p>
 
+                    <br>
                     <button type="submit" id="submit">Create Account</button>
                 </form>
                 <p>Already have an account? Log in</p>
