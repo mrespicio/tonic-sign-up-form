@@ -11,12 +11,13 @@ for(let inp of input){
 
         // pw contains num, upper, and lower
         if(inp.id == 'pw'){
-            console.log('pw field');
+            //console.log('pw field');
             const userPw = document.getElementById('pw').value;
             const pwLength = document.getElementsByTagName('li')[0]
             const pwNum = document.getElementsByTagName('li')[1]
             const pwLower = document.getElementsByTagName('li')[2]
             const pwUpper = document.getElementsByTagName('li')[3]
+            const pwSpe = document.getElementsByTagName('li')[4]
 
             if(userPw.length>=8) pwLength.style.color = 'green';
             else if(userPw.length<8) pwLength.style.color = 'red';
@@ -29,8 +30,12 @@ for(let inp of input){
 
             if(/[A-Z]/.test(userPw)) pwUpper.style.color = 'green'
             else if(!/[A-Z]/.test(userPw)) pwUpper.style.color = 'red'
+
+            if(!/^[a-zA-Z0-9]*$/.test(userPw)) pwSpe.style.color = 'red'
+            else if(/^[a-zA-Z0-9]*$/.test(userPw)) pwSpe.style.color = 'green'
         }
 
+        
         //other fields where html validation takes care of
         if(inp.checkValidity()){
             //console.log(inp);
