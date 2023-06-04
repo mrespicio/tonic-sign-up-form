@@ -60,6 +60,14 @@ for(let inp of input){
             pmsg.innerHTML = '';
             pmsg2.innerHTML = '';
         }
+
+        const emsg = document.getElementById('em-msg');
+        if(inp.id == 'email' && !inp.checkValidity()){
+            emsg.innerHTML = 'Please enter a valid email'
+        }
+        if(inp.id == 'email' && inp.checkValidity()){
+            emsg.innerHTML = ''
+        }
     }) 
 }
 
