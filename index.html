@@ -18,7 +18,8 @@
                 <h1>Tonic Cosmetics</h1>
                 <h2>This is not a real company</h2>
             </section>
-            <section id="signup-form">
+            <section id="signup-sec">
+                <h3>Sign Up</h3>
                 <form id="signup" action="">
                     <!-- validation ux 
                     validates when user leaves input
@@ -28,47 +29,62 @@
                     -->
 
                     <!-- no constraints for first and last name -->
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="first-name" 
-                    minlength="1" pattern="(^[A-Za-z]+$)" required>
-                    <p></p>
+                    <div class="field">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="first-name" 
+                        minlength="1" pattern="(^[A-Za-z]+$)" required>
+                        <p></p>
+                    </div>
 
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="last-name" 
-                    minlength="1" pattern="(^[A-Za-z]+$)" required>
-                    <p></p>
+                    <div class="field">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="last-name" 
+                        minlength="1" pattern="(^[A-Za-z]+$)" required>
+                        <p></p>
+                    </div>
 
-                    <!-- type email takes care of validation -->
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="e-mail" required>
-                    <p id="em-msg"></p>
+                    <div class="field">
+                        <!-- type email takes care of validation -->
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="e-mail" required>
+                        <p id="em-msg"></p>
+                    </div>
 
-                    <!-- pure numbers or numbers with dashes, spaces, or . -->
-                    <label for="pnum">Phone Number</label>
-                    <input type="text" id="pnum" name="phone-num" 
-                    pattern="[0-9]{10}" required>
-                    <p id="pn-msg"></p>
-                    <p id="pn-msg2"></p>
-                    <!-- pattern="[0-9]{10}|\d{3}[\-\s\.]\d{3}[\-\-\s\.]\d{4}" -->
+                    <div class="field">
+                        <!-- pure numbers or numbers with dashes, spaces, or . -->
+                        <label for="pnum">Phone Number</label>
+                        <input type="text" id="pnum" name="phone-num" 
+                        pattern="[0-9]{10}" required>
+                        <p id="pn-msg"></p>
+                        <p id="pn-msg2"></p>
+                        <p></p>
+                        <!-- pattern="[0-9]{10}|\d{3}[\-\s\.]\d{3}[\-\-\s\.]\d{4}" -->
+                    </div>
 
-                    <!-- length > 8, contains num, upper, and lower -->
-                    <!-- use js to check -->
-                    <label for="pw">Password</label>
-                    <input type="password" id="pw" name="p-word"
-                    minlength="8" maxlength="24" pattern="^[a-zA-Z0-9]*$" required>
-                    <ul id="pw-conditions">
-                        <li>Contains 8 or more characters</li>
-                        <li>Contains number</li>
-                        <li>Contains lower case</li>
-                        <li>Contains upper case</li>
-                        <li>No special characters</li>
-                    </ul>
+                    <div class="field">
+                        <!-- length > 8, contains num, upper, and lower -->
+                        <!-- use js to check -->
+                        <label for="pw">Password</label>
+                        <input type="password" id="pw" name="p-word"
+                        minlength="8" maxlength="24" pattern="^[a-zA-Z0-9]*$" required>
+                        
+                        <ul id="pw-conditions">
+                            <li>Contains 8 or more characters</li>
+                            <li>Contains number</li>
+                            <li>Contains lower case</li>
+                            <li>Contains upper case</li>
+                            <li>No special characters</li>
+                        </ul>
+                    </div>
 
-                    <!-- check this with p-word in js -->
-                    <label for="cpw">Confirm Password</label>
-                    <input type="password" id="cpw" name="conp-word"
-                    minlength="8" maxlength="24" pattern="^[a-zA-Z0-9]*$" required>
-                    <p id="pw-confirmation-txt">Passwords do not match</p>
+                    <div class="field">
+                        <!-- check this with p-word in js -->
+                        <label for="cpw">Confirm Password</label>
+                        <input type="password" id="cpw" name="conp-word"
+                        minlength="8" maxlength="24" pattern="^[a-zA-Z0-9]*$" required>
+                        <p id="pw-confirmation-txt">Passwords do not match</p>
+                    </div>
+
 
                     <button type="submit" id="submit">Create Account</button>
                 </form>

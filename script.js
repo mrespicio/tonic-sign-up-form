@@ -53,8 +53,10 @@ for(let inp of input){
             if(!inp.checkValidity()){
             pmsg.innerHTML = 'Phone number not valid';
             pmsg.style.color = 'red';
-            if(inp.value.length != 10) pmsg2.innerHTML = 'Phone number length must contain 10 digits'
-            if(!/^[0-9]$/.test(inp.value)) pmsg2.innerHTML = 'Phone number must only contain digits' 
+    
+            if(inp.value.length != 10)pmsg2.innerHTML = 'Phone number length must contain 10 digits'
+
+            //if(!/^[0-9]$/.test(inp.value)) pmsg2.innerHTML = 'Phone number must only contain digits' 
             }
             if(inp.checkValidity()){
                 pmsg.innerHTML = '';
