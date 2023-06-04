@@ -37,6 +37,7 @@ for(let inp of input){
         // confirm if passwords match
         if(inp.id == 'cpw'){
             const pwCon = document.getElementById('pw-confirmation-txt');
+            
             if(userPwCon == userPw){
                 pwCon.innerHTML = 'Passwords match!'
                 pwCon.style.color ='green';
@@ -48,11 +49,13 @@ for(let inp of input){
         }
         const pmsg = document.getElementById('pn-msg');
         const pmsg2 = document.getElementById('pn-msg2');
+        pmsg.style.color = 'red';
+        pmsg2.style.color = 'red';
 
         if(inp.id == 'pnum'){
             if(!inp.checkValidity()){
             pmsg.innerHTML = 'Phone number not valid';
-            pmsg.style.color = 'red';
+
     
             if(inp.value.length != 10)pmsg2.innerHTML = 'Phone number length must contain 10 digits'
 
@@ -64,6 +67,7 @@ for(let inp of input){
             }
         }
         const emsg = document.getElementById('em-msg');
+        emsg.style.color = 'red'
         if(inp.id == 'email'){
             if(!inp.checkValidity()) emsg.innerHTML = 'Please enter a valid email'
             if(inp.checkValidity()) emsg.innerHTML = ''
