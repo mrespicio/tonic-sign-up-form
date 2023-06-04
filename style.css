@@ -3,7 +3,7 @@
     padding: 0;
     border: 0;
     font-family: Helvetica, Arial;
-    --darkest: #6c584a;
+    --darkest: #381f12;
     --darkest-second: #907a6b;
     --lightest-second: #c3ac99;
     --lightest: #ebddd1;
@@ -35,17 +35,23 @@ main{
 }
 
 #right>#header{
-    border: solid 1px orange;
     min-height: 200px;
+    background-color: var(--lightest-second);
+    color: var(--darkest)
 }
 
 #signup-sec{
-    border: solid 2px lavender;
+
 }
 
 #signup{
     display: grid;
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, 300px);
+    background-color: var(--lightest);
+}
+
+#signup>h3{
+    grid-column: -1/1;
 }
 
 #signup .field{
@@ -65,6 +71,7 @@ main{
     border-radius: .3em;
     background-color: var(--lightest);
     color: var(--darkest);
+    box-shadow: 2px 2px var(--darkest);
 }
 
 ul li{
@@ -76,7 +83,12 @@ ul li{
     color: var(--lightest);
     font-weight: bold;
     padding: 1em;
-    border-radius: .3em;
+    border-radius: .4em;
+}
+
+
+input:not(:focus){
+    border: solid 1px var(--darkest-second)
 }
 
 input:valid{
@@ -90,6 +102,7 @@ input:invalid{
 input:focus{
     border: 3px solid lightblue;
 }
+
 
 #pw-conditions>li {
     color: red;
