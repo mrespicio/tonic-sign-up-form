@@ -4,16 +4,14 @@
 
 const input = document.getElementsByTagName('input'); // collection of all input tags
 for(let inp of input){
-    if(inp) // if input is password, validate specific conditions
+    // add event to all input fields
     inp.addEventListener('focusout', (e) => {
-        //console.log(inp.id);
-        //console.log(inp.reportValidity());
         const userPw = document.getElementById('pw').value;
         const userPwCon = document.getElementById('cpw').value;
 
+        // if input is password, validate specific conditions
         // pw contains num, upper, and lower
         if(inp.id == 'pw'){
-            //console.log('pw field');
             const pwLength = document.getElementsByTagName('li')[0]
             const pwNum = document.getElementsByTagName('li')[1]
             const pwLower = document.getElementsByTagName('li')[2]
@@ -36,7 +34,7 @@ for(let inp of input){
             else if(/^[a-zA-Z0-9]*$/.test(userPw)) pwSpe.style.color = 'green'
         }
 
-
+        // confirm if passwords match
         if(inp.id == 'cpw'){
             const pwCon = document.getElementById('pw-confirmation-txt');
             if(userPwCon == userPw){
@@ -48,14 +46,21 @@ for(let inp of input){
                 pwCon.style.color = 'red';
             }
         }
+        const pmsg = document.getElementById('pn-msg');
+        const pmsg2 = document.getElementById('pn-msg2');
 
-        //other fields where html validation takes care of
-        if(inp.checkValidity()){
-            //console.log(inp);
-            console.log('good!')
+        if(inp.id == 'pnum' && !inp.checkValidity()){
+            pmsg.innerHTML = 'Phone number not valid';
+            pmsg.style.color = 'red';
+            if(inp.value.length != 10) pmsg2.innerHTML = 'Phone number length must contain 10 digits'
+            if(!/^[0-9]$/.test(inp.value)) pmsg2.innerHTML = 'Phone number must only contain digits'
+            
         }
-        else console.log('not good!');
-    }) // add event to all input fields
+        if(inp.id == 'pnum' && inp.checkValidity()){
+            pmsg.innerHTML = '';
+            pmsg2.innerHTML = '';
+        }
+    }) 
 }
 
 
