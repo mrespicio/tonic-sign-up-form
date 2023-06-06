@@ -12,24 +12,32 @@
 
 main{
     display: flex;
-    flex-direction: row;
     border: solid 1px orange;
 }
 
 #left{
-    border: solid 1px blue;
-    width: 40%
+    border: solid 3px blue;
+    width: max(400px, 40%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #left>img{
     width: 100%;
+    top: 0;
+}
+
+#left>h1{
+    color: var(--lightest);
+    text-shadow: .1em .1em var(--darkest);
+    position: absolute;
 }
 
 #right{
-    display: flex;
-    flex-direction: column;
     border: solid 1px green;
-    width: 60%;
+    width: max(800px, 60%);
     max-width: 1440px;
     padding: 20px;
 }
@@ -37,7 +45,8 @@ main{
 #right>#header{
     min-height: 200px;
     background-color: var(--lightest-second);
-    color: var(--darkest)
+    color: var(--darkest);
+    padding: 60px;
 }
 
 #signup-sec{
