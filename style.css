@@ -26,27 +26,26 @@ main{
 
 #left>img{
     width: 100%;
-    top: 0;
 }
 
 #left>h1{
     color: var(--lightest);
     text-shadow: .1em .1em var(--darkest);
     position: absolute;
+    top: 50px;
 }
 
 #right{
     border: solid 1px green;
-    width: max(800px, 60%);
-    max-width: 1440px;
-    padding: 20px;
+    width: max(1440px, 60%);
+    margin: 0 auto;
 }
 
 #right>#header{
-    min-height: 200px;
+    min-height: 150px;
     background-color: var(--lightest-second);
     color: var(--darkest);
-    padding: 60px;
+    padding: 50px;
 }
 
 #signup-sec{
