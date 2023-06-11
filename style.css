@@ -13,11 +13,11 @@
 main{
     display: flex;
     border: solid 1px orange;
+    height: 100vh;
+    height: 100svh;
 }
 
 #left{
-    border: solid 3px blue;
-    width: max(400px, 40%);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@ main{
 }
 
 #left>img{
-    width: 100%;
+    height: 100%;
 }
 
 #left>h1{
@@ -36,49 +36,47 @@ main{
 }
 
 #right{
-    border: solid 1px green;
-    width: max(1440px, 60%);
-    margin: 0 auto;
-}
-
-#right>#header{
-    min-height: 150px;
-    background-color: var(--lightest-second);
-    color: var(--darkest);
-    padding: 50px;
-}
-
-#signup-sec{
-
-}
-
-#signup{
-    display: grid;
-    grid-template-columns: repeat(2, 300px);
     background-color: var(--lightest);
-}
-
-#signup>h3{
-    grid-column: -1/1;
-}
-
-#signup .field{
-    border: solid 1px aquamarine;
-    padding: 1rem;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.field>label{
+#right>#header{
+    background-color: var(--lightest-second);
+    color: var(--darkest);
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+}
+
+#signup{
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    gap: 20px 50px;
+    padding: 50px ;
 
 }
 
+#signup>h2{
+    grid-column: -1/1;
+    margin: 10px 0;
+}
+
+#signup .field{
+    display: flex;
+    flex-direction: column;
+}
+
 .field input{
-    height: 1.7rem;
-    border: solid 1px grey;
-    border-radius: .3em;
     background-color: var(--lightest);
     color: var(--darkest);
+    height: 2rem;
+    border: solid 1px grey;
+    border-radius: .3em;
     box-shadow: 2px 2px var(--darkest);
 }
 
@@ -90,26 +88,29 @@ ul li{
     background-color: var(--darkest);
     color: var(--lightest);
     font-weight: bold;
-    padding: 1em;
+    padding: 1rem;
     border-radius: .4em;
 }
 
-
+/*
 input:not(:focus){
     border: solid 1px var(--darkest-second)
-}
-
-input:valid{
-    border: 1px solid green;
-}
-
-input:invalid{
-    border: 1px solid red;
-}
+} 
 
 input:focus{
     border: 3px solid lightblue;
 }
+
+*/
+
+input:not(:focus):not(:placeholder-shown):invalid{
+    border: 1px solid red;
+}
+
+input:not(:focus):not(:placeholder-shown):valid{
+    border: 1px solid green;
+} 
+
 
 
 #pw-conditions>li {
@@ -118,4 +119,20 @@ input:focus{
 
 #pw-confirmation-txt {
     color: red
+}
+
+/* small width */
+@media (max-width: 425px){
+    main{
+        
+    }
+    #left>img{
+        
+    }
+    #right{
+
+
+    height: 800px;
+    }
+
 }
