@@ -14,7 +14,6 @@ main{
     flex-direction: row;
     height: 100vh;
     height: 100svh;
-    flex-wrap: wrap;
 }
 
 #left{
@@ -27,6 +26,7 @@ main{
 
 #left>img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -130,7 +130,7 @@ input:not(:focus):not(:placeholder-shown):valid{
     color: red
 }
 
-/* small width */
+/* mobile width */
 @media (max-width: 425px){
     main{
         flex-wrap: wrap;

@@ -38,7 +38,7 @@ for(let inp of input){
         if(inp.id == 'cpw'){
             const pwCon = document.getElementById('pw-confirmation-txt');
             
-            if(userPwCon == userPw){
+            if(userPwCon == userPw && userPw != ''){
                 pwCon.innerHTML = 'Passwords match!'
                 pwCon.style.color ='green';
             } 
