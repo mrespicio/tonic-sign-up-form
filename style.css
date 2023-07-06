@@ -37,6 +37,10 @@ main{
     top: 50px;
 }
 
+#left>#cred{
+    position: absolute;
+    bottom: 2px;
+}
 #right{
     display: flex;
     background-color: var(--lightest);
@@ -102,6 +106,11 @@ ul li{
     border-radius: .4em;
 }
 
+a:link,
+a:visited{
+    text-decoration: none;
+    color: var(--darkest)
+}
 
 input{
     border: solid 1px var(--darkest-second)
