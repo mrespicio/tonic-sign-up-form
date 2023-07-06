@@ -30,64 +30,65 @@
                     stay invalid until valid (even without the user exiting)
                     -->
 
-                    <!-- no constraints for first and last name -->
-                    <div class="field">
-                        <label for="fname">First Name</label>
-                        <input type="text" placeholder=' ' id="fname" name="first-name" 
-                        minlength="1" pattern="(^[A-Za-z]+$)" required>
-                        <p></p>
-                    </div>
+                    <div id="sign-grid">
+                        <!-- no constraints for first and last name -->
+                        <div class="field">
+                            <label for="fname">First Name</label>
+                            <input type="text" placeholder=' ' id="fname" name="first-name" 
+                            minlength="1" pattern="(^[A-Za-z]+$)" required>
+                            <p></p>
+                        </div>
 
-                    <div class="field">
-                        <label for="lname">Last Name</label>
-                        <input type="text" placeholder=' ' id="lname" name="last-name" 
-                        minlength="1" pattern="(^[A-Za-z]+$)" required>
-                        <p></p>
-                    </div>
+                        <div class="field">
+                            <label for="lname">Last Name</label>
+                            <input type="text" placeholder=' ' id="lname" name="last-name" 
+                            minlength="1" pattern="(^[A-Za-z]+$)" required>
+                            <p></p>
+                        </div>
 
-                    <div class="field">
-                        <!-- type email takes care of validation -->
-                        <label for="email">Email</label>
-                        <input type="email" placeholder=' ' id="email" name="e-mail" required>
-                        <p id="em-msg"></p>
-                    </div>
+                        <div class="field">
+                            <!-- type email takes care of validation -->
+                            <label for="email">Email</label>
+                            <input type="email" placeholder=' ' id="email" name="e-mail" required>
+                            <p id="em-msg"></p>
+                        </div>
 
-                    <div class="field">
-                        <!-- pure numbers or numbers with dashes, spaces, or . -->
-                        <label for="pnum">Phone Number</label>
-                        <input type="text" placeholder=' ' id="pnum" name="phone-num" 
-                        pattern="[0-9]{10}" required>
-                        <p id="pn-msg"></p>
-                        <p id="pn-msg2"></p>
-                        <p></p>
-                        <!-- pattern="[0-9]{10}|\d{3}[\-\s\.]\d{3}[\-\-\s\.]\d{4}" -->
-                    </div>
+                        <div class="field">
+                            <!-- pure numbers or numbers with dashes, spaces, or . -->
+                            <label for="pnum">Phone Number</label>
+                            <input type="text" placeholder=' ' id="pnum" name="phone-num" 
+                            pattern="[0-9]{10}" required>
+                            <p id="pn-msg"></p>
+                            <p id="pn-msg2"></p>
+                            <p></p>
+                            <!-- pattern="[0-9]{10}|\d{3}[\-\s\.]\d{3}[\-\-\s\.]\d{4}" -->
+                        </div>
 
-                    <div class="field">
-                        <!-- length > 8, contains num, upper, and lower -->
-                        <!-- use js to check -->
-                        <label for="pw">Password</label>
-                        <input type="password" placeholder=' ' id="pw" name="p-word"
-                        minlength="8" maxlength="24" pattern="^[a-zA-Z0-9]*$" required>
-                        <br>
-                        <ul id="pw-conditions">
-                            <li>Contains 8 or more characters</li>
-                            <li>Contains number</li>
-                            <li>Contains lower case</li>
-                            <li>Contains upper case</li>
-                            <li>No special characters</li>
-                        </ul>
-                    </div>
+                        <div class="field">
+                            <!-- length > 8, contains num, upper, and lower -->
+                            <!-- use js to check -->
+                            <label for="pw">Password</label>
+                            <input type="password" placeholder=' ' id="pw" name="p-word"
+                            minlength="8" maxlength="24" pattern="^[a-zA-Z0-9]*$" required>
+                            <br>
+                            <ul id="pw-conditions">
+                                <li>Contains 8 or more characters</li>
+                                <li>Contains number</li>
+                                <li>Contains lower case</li>
+                                <li>Contains upper case</li>
+                                <li>No special characters</li>
+                            </ul>
+                        </div>
 
-                    <div class="field">
-                        <!-- check this with p-word in js -->
-                        <label for="cpw">Confirm Password</label>
-                        <input type="password" placeholder=' ' id="cpw" name="conp-word"
-                        minlength="8" maxlength="24" pattern="^[a-zA-Z0-9]*$" required>
-                        <p id="pw-confirmation-txt"></p>
+                        <div class="field">
+                            <!-- check this with p-word in js -->
+                            <label for="cpw">Confirm Password</label>
+                            <input type="password" placeholder=' ' id="cpw" name="conp-word"
+                            minlength="8" maxlength="24" pattern="^[a-zA-Z0-9]*$" required>
+                            <p id="pw-confirmation-txt"></p>
+                        </div>
                     </div>
-
-                    <button type="submit" id="submit">Create Account</button> <br>
+                    <button type="submit" id="submit">Create Account</button> <br> <br>
                     <p>Already have an account? Log in</p>
                 </form>
             </section>
