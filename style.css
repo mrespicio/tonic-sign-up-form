@@ -110,8 +110,13 @@ a:visited{
     color: var(--darkest)
 }
 
+
+#pw-conditions>li{
+    color: var(--darkest-second);
+}
+
 input{
-    border: solid 1px var(--darkest-second)
+    border: solid 1px var(--darkest-second);
 }
 
 input:not(:focus):not(:placeholder-shown):invalid{
@@ -122,9 +127,10 @@ input:not(:focus):not(:placeholder-shown):valid{
     border: 1px solid green;
 } 
 
+/*
 #pw-conditions>li {
     color: red;
-}
+}*/
 
 #pw-confirmation-txt {
     color: red
