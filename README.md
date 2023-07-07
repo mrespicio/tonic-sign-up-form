@@ -1,5 +1,10 @@
 # tonic-sign-up-form
 
+[Live Demo](https://mrespicio.github.io/tonic-sign-up-form/)
+
+## Preview
+![image of tonic cosmetics sign up form](preview.png)
+
 ## Project Goals
 * Create a sign-up form using HTML form validation
 * Practice responsive CSS
